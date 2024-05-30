@@ -1,4 +1,4 @@
-FROM node:20.13.1
+FROM node:latest
 
 WORKDIR /app
 
@@ -8,4 +8,5 @@ RUN npm ci
 
 COPY . .
 
+RUN npm run build
 CMD ["npm", "run", "develop"]
