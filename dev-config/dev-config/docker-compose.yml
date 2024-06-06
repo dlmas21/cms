@@ -11,8 +11,9 @@ services:
       - /app/node_modules
       - /app/.next
     environment:
-      API_TOKEN: ${API_TOKEN}
-      API_URL: ${API_URL}
+      - API_TOKEN:${API_TOKEN}
+      - API_URL:${API_URL}
+      - NODE_ENV:production
     networks:
       - strapi
   cms:
